@@ -37,6 +37,7 @@ fi
 
 # Install Zabbix agent
 echo "Installing Zabbix-Agent"
+sudo -u $current_user brew update
 sudo -u $current_user brew install zabbix --without-server-proxy
 
 # Create Zabbix user group
