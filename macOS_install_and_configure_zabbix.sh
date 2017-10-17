@@ -68,8 +68,8 @@ echo "PidFile=/usr/local/var/run/zabbix/zabbix_agentd.pid
 LogFile=/var/log/zabbix/zabbix_agentd.log
 LogFileSize=0
 Server=$zabbix_server
-ServerActive=$zabbix_agent
-Hostname=$zabbix_server
+ServerActive=$zabbix_server
+Hostname=$zabbix_agent
 Include=/usr/local/etc/zabbix/zabbix_agentd.conf.d/
 " > /usr/local/etc/zabbix/zabbix_agentd.conf
 
