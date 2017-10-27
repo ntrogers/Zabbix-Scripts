@@ -3,6 +3,14 @@
 # Example usage:
 # curl -s https://<gistURL> | sudo bash /dev/stdin <zabbix.server.com> <agentname.client.com>
 
+version=2.0
+
+echo ""
+echo "--------------------------------------------------------"
+echo "MacOS-Install-and-Configure-Zabbix\'er, version $version"
+echo "--------------------------------------------------------"
+echo ""
+
 if [ "$EUID" -ne 0 ]
   then echo "Scipt must be run as root!"
   exit
@@ -19,6 +27,7 @@ fi
 # Check that Xcode CLTs installed
 if ! xcode-select --install 2>&1 | grep installed; then
     echo "Xcode Command Line Tools required for Homebrew, installing now. This could take some time."
+    echo "Note: This requires a user to be logged into the machine."
     PROD=$(softwareupdate -l | grep "\*.*Command Line" | tail -n 1 | awk -F"*" '{print $2}' | sed -e 's/^ *//' |  tr -d '\n')
     softwareupdate -i "$PROD" --verbose
 fi
