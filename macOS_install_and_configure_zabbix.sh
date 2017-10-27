@@ -21,7 +21,6 @@ if ! xcode-select --install 2>&1 | grep installed; then
     echo "Xcode Command Line Tools required for Homebrew, installing now. This could take some time."
     PROD=$(softwareupdate -l | grep "\*.*Command Line" | tail -n 1 | awk -F"*" '{print $2}' | sed -e 's/^ *//' |  tr -d '\n')
     softwareupdate -i "$PROD" --verbose
-    exit
 fi
 
 # Accept Xcode license (just in case)
