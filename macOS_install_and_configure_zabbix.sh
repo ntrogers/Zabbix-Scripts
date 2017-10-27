@@ -7,7 +7,7 @@ version=2.0
 
 echo ""
 echo "--------------------------------------------------------"
-echo "MacOS-Install-and-Configure-Zabbix\'er, version $version"
+echo "MacOS-Install-and-Configure-Zabbix'er, version $version"
 echo "--------------------------------------------------------"
 echo ""
 
